@@ -1,0 +1,49 @@
+header {
+  margin-top: 1.6rem;
+  position: sticky;
+  top: 1.6rem;
+  z-index: 2024;
+  .content-header {
+    padding: 0.8rem 0.8rem 0.8rem 2.1rem;
+    border-radius: 10rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(3.5px);
+    @include flexCenterJustify;
+    .btn-mobile {
+      display: none;
+    }
+  }
+  .left-content {
+    @include flexCenter;
+    gap: 1.6rem;
+  }
+  a {
+    @include flexCenter;
+    gap: 0.8rem;
+  }
+  span {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $gray-200;
+    transition: color ease-in-out 3ms;
+    &:hover {
+      color: $purple-10;
+    }
+  }
+  @include responsivo("mobile") {
+    .content-header {
+      padding: 2rem 2.5rem;
+      .logo {
+        width: 13.504rem;
+      }
+      .left-content {
+        display: none;
+      }
+      .btn-mobile {
+        display: block;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
